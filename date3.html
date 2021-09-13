@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let date=function(day,month,year){
+           this.day=day;
+           this.month=month;
+           this.year=year;
+           this.getday=function(){
+               return this.day
+           }
+           this.getmonth=function(){
+               return this.month
+           }
+           this.getyear=function(){
+               return this.year
+           }
+           this.setday=function(day){
+               this.day=day;
+           }
+           this.setmonth=function(month){
+               this.month=month;
+           }
+           this.setyear=function(year){
+                this.year=year;
+           }
+           this.toSring=function(){
+               return "ngày :"+this.day+" tháng : "+this.month+" năm : "+this.year;
+           }
+        
+       };
+       let mydate=new date(1,2,2001);
+       //truy suất mydate:
+       console.log(mydate);
+       //truy suất tosring
+       console.log(mydate.toSring());
+         //thay đổi giá trị thuộc tính day:
+         mydate.day=11;
+         console.log(mydate.day);
+         // thay đổi giá trị thuộc tính bằng phương thức:
+         mydate.setday(15);
+         console.log(mydate.day);
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="hung()">
+   <img src="th.jpg" id="n1" style="position: absolute;left: 0px;top: 0px;" alt="">
+   <script>
+function hung(){
+    h=addEventListener("keydown",moveSelection);
+
+}
+function moveSelection(evt){
+    switch(evt.key){
+    case"ArrowRight":
+    moveright();
+    break;
+    case"ArrowLeft":
+    moveleft();
+    break;
+    case"ArrowUp":
+    moveup();
+    break;
+    case"ArrowDown":
+    movedown();
+    break;
+    }
+}
+function moveright(){
+    n1=document.getElementById("n1");
+    n1.style.left=parseInt(n1.style.left)+10+"px";
+
+}
+function moveleft(){
+    n1=document.getElementById("n1");
+    n1.style.left=parseInt(n1.style.left)-10+"px";
+    
+}
+function moveup(){
+    n1=document.getElementById("n1");
+    n1.style.top=parseInt(n1.style.top)+10+"px";
+    
+}
+function movedown(){
+    n1=document.getElementById("n1");
+    n1.style.top=parseInt(n1.style.top)-10+"px";
+    
+}
+   </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let MyDate = function( ts_day,ts_month, ts_year){
+            this.day 	= ts_day;
+			this.month 	= ts_month;
+			this.year 	= ts_year;
+            this.getDay = function(){
+				return this.day;
+			}
+            this.getMonth = function(){
+				return this.month;
+			}
+            this.getYear = function(){
+				return this.year;
+			}
+            this.setDay = function( ts_day ){
+				this.day = ts_day;
+			}
+            this.setMonth = function( ts_month ){
+				this.month = ts_month;
+			}
+            this.setYear = function( ts_year ){
+				this.year = ts_year;
+			}
+            this.setDate = function( ts_day, ts_month, ts_year ){
+                this.day = ts_day;
+				this.month = ts_month;
+				this.year = ts_year;
+			}
+            this.toString = function(){
+                return `Ngày ${this.day} tháng ${this.month} năm ${this.year}`;
+			}
+		};
+        let my_date = new MyDate( 13,9, 2021) ;
+		console.log( my_date );
+        //thay đổi giá trị thuộc tính day = 14
+        my_date.day = 14;
+        //thay đổi giá trị thuộc tính day = 15 qua phương thức
+		my_date.setDay(15);
+        //truy xuất thuộc tính day
+		console.log( 'day:' + my_date.day );
+        //truy xuất thuộc tính day thông qua phương thức
+		console.log( 'day từ phương thức: ' + my_date.getDay() );
+        //truy xuất phương thức toString
+		console.log( my_date.toString() );
+    </script>
+</body>
+</html>
