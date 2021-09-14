@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class dienthoai{
+            constructor(thamso){
+                this.thamso=thamso;
+                this.statuspin=100;
+                this.luu_tinh_nhan="";
+                this.tin_nhan_dagui=[];
+                this.hop_thu_den=[];
+
+
+            }
+            getkiemtra(){
+                alert("bat dien thoai");
+            }
+            getstastuspin(){
+               this.statuspin--;
+            }
+            getsac_pin(){
+                setTimeout(this.statuspin--,100)
+                this.statuspin++;
+            }
+            getsoan_tin_nhan(noidung){
+                this.tin_nhan_dagui=noidung;
+                this.luu_tinh_nhan=noidung;
+            }
+            getnhan_tin_nhan(noidung){
+                this.hop_thu_den=[];
+                this.tin_nhan_dagui=[];
+                this.tin_nhan_dagui=noidung;
+            }
+            getgui_tin_nhan(noidung){
+                this.tin_nhan_dagui=noidung;
+                this.luu_tinh_nhan=noidung;
+            }
+
+        };
+    
+        samsung=new dienthoai("samsung");
+        samsung.getkiemtra();
+        console.log(samsung);
+        iphone=new dienthoai("iphone");
+        console.log(iphone);
+        samsung.getsoan_tin_nhan("Chao cau iphone");
+        samsung.getgui_tin_nhan("Chao cau iphone");
+        console.log(samsung);
+        iphone.hop_thu_den="Chao cau iphone";
+        console.log(iphone);
+        samsung.getsac_pin();
+        iphone.getsac_pin();
+    </script>
+</body>
+</html>
