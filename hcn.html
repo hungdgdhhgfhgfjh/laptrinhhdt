@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="n1" id="n1" style="background-color: green; ">
+        <br>
+        <br>
+        chieu dai <input type="text" value="" name="" id="n2">
+        <br>
+        <br>
+        chieu rong <input type="text" value="" name="" id="n3">
+        <br>
+        <input type="button" onclick="hcn.chuvi();" value="chu vi" name="" id="">
+        <input type="button" onclick="hcn.dientic();" value="dien tich" name="" id="">
+        <br>
+        <p id="n4"></p>
+    </div>
+    <script>
+        var n1 = document.getElementById("n1");
+        var n2 = document.getElementById("n2").value;
+        var n3 = document.getElementById("n3").value;
+        class hinh {
+            constructor(dai, rong) {
+      
+                this.dai = dai;
+                this.rong = rong;
+            }
+            chuvi(dai, rong) {
+                var n1 = document.getElementById("n1");
+                var n2 = document.getElementById("n2").value;
+                var n3 = document.getElementById("n3").value;
+                var n4 = document.getElementById("n4")
+                n1.style.width = n2 + "px";
+                n1.style.height = n3 + "px";
+                this.dai = n2;
+                this.rong = n3;
+                var cv = (n2 + n3) * 2;
+                n4.innerHTML = "chu vi : " + cv + "px";
+            }
+            dientic(dai, rong) {
+                var n1 = document.getElementById("n1");
+                var n2 = document.getElementById("n2").value;
+                var n3 = document.getElementById("n3").value;
+                var n4 = document.getElementById("n4");
+                n1.style.width = n2 + "px";
+                n1.style.height = n3 + "px";
+                this.dai = n2;
+                this.rong = n3;
+                var cv = (n2) * (n3);
+                n4.innerHTML = "dien tich : " + cv + "px^2";
+            }
+
+        }
+        let hcn = new hinh(1, 2);
+        // hcn.chuvi();
+        // hcn.dientic();
+
+
+
+    </script>
+</body>
+
+</html>

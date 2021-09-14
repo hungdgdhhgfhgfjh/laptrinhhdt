@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    F<input type="text" id="n1" value="">
+    <br>
+    <br>
+    C<input type="text" id="n2" value="">
+    <br>
+    <br>
+    K<input type="text" id="n3" value="">
+    <br>
+    <br>
+    <input type="button" value="FsangC" onclick="tpr.CsangF()" name="" id="">
+    <input type="button" value="FsangK" onclick="tpr.CsangK" name="" id="">
+    <br>
+    <p id="n4"></p>
+    <p id="n5"></p>
+</body>
+<script>
+    class Nhietdo {
+        constructor(F, K, C) {
+            this.F = F;
+            this.K = K;
+            this.C = C;
+
+
+        };
+        setK(F) {
+            return this.C;
+        };
+        setC(C) {
+            return this.F;
+        }; setF(K) {
+            return this.K;
+        }
+        CsangF(F, C) {
+            var n1 = document.getElementById("n1").value;
+            var n2 = document.getElementById("n2").value;
+            this.F = n1;
+            this.C = n2;
+            n2 = parseFloat(n2);
+            var n1 = (18000 * n2) / (-32);
+            document.getElementById("n4").innerHTML = "F=" + n1;
+            return n1;
+
+        };
+        CsangK(K, C) {
+            var n3 = document.getElementById("n1").value;
+            var n2 = document.getElementById("n2").value;
+            this.K = n3;
+            this.C = n2;
+            n2 = parseFloat(n2);
+            var n3 = n2 + 273.15;
+            document.getElementById("n4").innerHTML = "K=" + n3;
+            return n3;
+
+        };
+        convertCsangK(){
+            this.K = this.C + 273.15;
+            return this.K;
+        }
+        convertCsangF(){
+             this.F = (18000 * This.C) / (-32);
+            
+            return this.F;
+        }
+    }
+    let tpr = new Nhietdo(1, 2, 3);
+    tpr.C = 12;
+    console.log(tpr);
+    tpr.convertCsangK();
+    console.log(tpr);
+    tpr.convertCsangF();
+</script>
+
+</html>
