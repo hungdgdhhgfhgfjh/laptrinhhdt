@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="th.jpg" id="n1" alt="">
+    <input type="button" onclick="ball.setmoveright()" value="moveright" name="" id="">
+    <input type="button" onclick="ball.setmoveleft()" value="moveleft" name="" id="">
+    <input type="button" onclick="ball.setmovedown()" value="movedown" name="" id="">
+    <input type="button" onclick="ball.setmoveup()" value="moveup" name="" id="">
+</body>
+<script>
+    n1=document.getElementById("n1")
+    n1=null
+    function init(){
+        n1=document.getElementById("n1");
+        n1.style.position="relative"
+        n1.style.left="0px"
+        n1.style.top="0px"
+    }
+    class img{
+       constructor(moveright,moveleft,movedown,moveup){
+           this.moveright=moveright;
+           this.moveleft=moveleft;
+           this.movedown=movedown;
+           this.moveup=moveup;
+       }
+       getmoveleft(){
+         return  this.moveleft;
+       }
+       getmoveright(){
+         return  this.moveright;
+       }
+       getmovedown(){
+         return  this.movedown;
+       }
+       getmoveup(){
+         return  this.moveup;
+       }
+       setmoveright(){
+        n1.style.left=parseInt(n1.style.left)+10+"px";
+        this.moveright=n1.style.left;
+       }
+       setmoveleft(){
+        n1.style.left=parseInt(n1.style.left)-10+"px";
+        this.moveleft=n1.style.left;
+       }
+       setmoveup(){
+        n1.style.top=parseInt(n1.style.top)-10+"px";
+        this.moveup=n1.style.top;
+       }
+       setmovedown(){
+        n1.style.top=parseInt(n1.style.top)+10+"px";
+        this.movedown=n1.style.top;
+       }
+    }
+    let ball=new img();
+    window.onload=init;
+
+</script>
+</html>
