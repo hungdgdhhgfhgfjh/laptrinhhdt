@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+       class tao{
+           constructor(weight,name){
+               this.weight=10;
+               this.name=name;
+           };
+           getweight(weight){
+            return this.weight;
+           }
+           setweight(weight){
+               if(this.weight>0){
+                   weight--;
+               }while(this.weight==0){
+                   alert("het tao");
+               }
+           };
+
+       }
+       let apple=new tao(10,"tao");
+       class Person{
+           constructor(weight,name,gender){
+               this.name=name;
+               this.weight=weight;
+               this.gender=gender;
+
+           }
+         getInfor(){
+             alert("hello I love");
+         };
+         getantoa(weight){
+            return this.weight;
+         };
+         setantoa(weight){
+             this.weight++;
+             
+         }
+
+       };
+       let adam=new Person(35,"adam","nam");
+       let eva=new Person(30,"eva","nu");
+       console.log(adam);
+       console.log(eva);
+       console.log(apple);
+       adam.getInfor();
+       eva.getInfor();
+       console.log(adam.setantoa());
+       console.log(eva.setantoa());
+      console.log( apple.setweight());
+
+    </script>
+</body>
+</html>
